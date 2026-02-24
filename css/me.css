@@ -39,13 +39,21 @@ body {
   padding-bottom: 24px;
 }
 
-/* Translucent panels so COOL */
+/* Translucent and BLURRED panels so COOL */
 .panel {
   background: rgba(20, 10, 50, 0.78);
   border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   padding: 16px;
   margin-top: 12px;
   border-radius: 8px;
+}
+.panel:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.5),
+    inset 0 0 0 1px rgba(152, 255, 152, 0.15);
 }
 
 /* Slightly stronger header block */
@@ -92,7 +100,7 @@ a:hover {
   border: 2px solid rgba(255, 255, 255, 0.85);
 }
 
-/* 800 version, 300px while I flesh out the assignment */
+/* Placeholder in case I add the 800px one back*/
 .profile-800 {
   max-width: 300px;
 }
@@ -118,4 +126,31 @@ a:hover {
   h1 {
     font-size: 1.6rem;
   }
+}
+/* Highlight name color */
+.highlight {
+  color: #98ff98;
+}
+
+/* Copy link button */
+.copyBtn {
+  background: rgba(20, 10, 50, 0.75);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: all 0.2s ease;
+}
+
+.copyBtn:hover {
+  background: rgba(40, 20, 90, 0.85);
+  border-color: #98ff98;
+  color: #98ff98;
+}
+
+.copyBtn:active {
+  transform: scale(0.97);
 }
