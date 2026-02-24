@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>John Keslin’s Introductions Website</title>
-  <script src="js/master.js"></script>
+  <script src="js/master.js" defer></script>
   <link rel="stylesheet" href="css/me.css">
 </head>
 
@@ -19,16 +19,16 @@
 
   <main class="container">
 
-    <!-- 800x800 image centered -->
+    <!-- 300x300 image centered -->
     <img
       src="images/me.png"
       alt="John"
-      class="profile-image profile-800"
+      class="profile-image profile-300"
     >
 
     <!-- Heading Section -->
     <header class="panel main-info">
-      <h1>John Keslin’s Introductions Website</h1>
+      <h1><span class="clickName">John Keslin</span>’s Introductions Website</h1>
 
       <p>
         Email:
@@ -71,33 +71,56 @@
       </ul>
 
       <p>
-        Here's some more information about
+        Here’s some more information about
         <a href="https://outofdarts.com/pages/what-is-nerf-modding/" target="_blank" rel="noopener">nerf modding</a>.
       </p>
     </section>
 
-    <!-- Fun Fact -->
-    <section class="panel">
-      <h2>Fun Fact</h2>
-      <p>
-        A fun fact about me is that I repurposed my old computer by installing Arch Linux and running a Jellyfin media server on it.
-      </p>
-    </section>
+<section id="funfact" class="panel">
+  <h2>Fun Fact</h2>
+
+  <details>
+    <summary>Click to reveal</summary>
+
+    <p>
+      I recently got in to self-hosting by bringing my old family computer back from the dead.
+      I installed Arch Linux on it since it’s a distro I already know well.
+      Currently, I’m running a media stack through Docker that’s got stuff like Jellyfin running on it.
+      I’m serving the apps on it via cloudflare tunnels to a domain I purchased so I can securely access my server outside my home network.
+      At this point, I’ve basically become my own Netflix, powered by my 14TB hard drive to store all the movies and TV shows I could ever want!
+    </p>
+
+  </details>
+</section>
+
+<section class="panel">
+  <h2>Previous Projects</h2>
+
+  <p>
+    <b>Sprint 1:</b>
+    <button class="copyBtn"
+            data-link="https://johnthreekay.github.io/me/">
+      Copy Link
+    </button>
+    <span class="copyMsg"></span>
+  </p>
+
+  <p>
+    <b>Sprint 2:</b>
+    <button class="copyBtn"
+            data-link="https://johnthreekay.github.io/getting-to-know-eachother/">
+      Copy Link
+    </button>
+    <span class="copyMsg"></span>
+  </p>
+</section>
 
     <!-- Footer -->
     <footer class="panel footer">
-      <p>Last Updated 2/3/2026</p>
-    
-    <img
-      src="images/me.png"
-      alt="John"
-      class="profile-image profile-300"
-    >
+      <p>Last Updated 2/24/2026</p>
     </footer>
 
   </main>
 </body>
 </html>
-
-
 
